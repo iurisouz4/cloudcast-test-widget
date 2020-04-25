@@ -1,0 +1,10 @@
+{
+    "name": "cloudcast-test-widget",
+    "version": "0.0.1",
+    "description": "A widget to run on Kiswe Cloudcast",
+    "dependencies": {
+        "ejs": "^3.1.2",
+        "express": "^4.15.2",
+        "socket.io": "^2.3.0"
+    }
+}
