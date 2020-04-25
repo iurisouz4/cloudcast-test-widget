@@ -3,6 +3,7 @@ var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var message = "";
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -11,8 +12,8 @@ app.get('/', (req, res) => {
   res.render(__dirname + '/public/index.ejs', {message:message});
 });
 
-http.listen(80, () => {
-  console.log('listening on *:80');
+http.listen(port, () => {
+  console.log('listening on *:{port}');
 });
 
 io.on('connection', (socket) => {
